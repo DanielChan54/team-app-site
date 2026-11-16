@@ -1340,3 +1340,21 @@ a {
   .attach-label{display:none}
   .calendar-card{width:52%;height:auto}
 }
+
+/* ---- Scroll-in animations (matched to the original Webflow interactions):
+   event cards rise 50px + fade in, calendar slides 50px from the left + fades in,
+   1s each, triggered when the element's top reaches the middle of the screen ---- */
+.js-motion .task-card,.js-motion .calendar-card{opacity:0;transition:opacity 1s cubic-bezier(.215,.61,.355,1),transform 1s cubic-bezier(.215,.61,.355,1);will-change:opacity,transform}
+.js-motion .task-card{transform:translateY(50px)}
+.js-motion .calendar-card{transform:translateX(-50px)}
+.js-motion .task-card.is-in,.js-motion .calendar-card.is-in{opacity:1;transform:none}
+/* "Learn More" arrow nudges right on hover (0.2s) */
+.link-block .arrow-icon{transition:transform .2s ease}
+.link-block:hover .arrow-icon,.link-block:focus-visible .arrow-icon{transform:translateX(8px)}
+/* popup fades in (0.2s) */
+.modal-wrapper.is-open{animation:modalFade .2s ease-out}
+@keyframes modalFade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .js-motion .task-card,.js-motion .calendar-card{opacity:1;transform:none;transition:none}
+  .modal-wrapper.is-open{animation:none}
+}

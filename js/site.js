@@ -16,7 +16,7 @@
 
   // Early-access modal
   var modal = document.querySelector('.modal-wrapper');
-  function openModal(e) { if (e) e.preventDefault(); if (modal) { modal.style.display = 'flex'; var f = modal.querySelector('input'); if (f) f.focus(); } }
+  function openModal(e) { if (e) e.preventDefault(); if (modal) { modal.style.display = 'flex'; modal.classList.remove('is-open'); void modal.offsetWidth; modal.classList.add('is-open'); var f = modal.querySelector('input'); if (f) f.focus(); } }
   function closeModal() { if (modal) modal.style.display = 'none'; }
   document.querySelectorAll('[data-open-modal]').forEach(function (el) { el.addEventListener('click', openModal); });
   if (modal) {
@@ -62,4 +62,19 @@
       x0 = null;
     });
   });
+
+  // Scroll-in animations: play once when the element's top reaches the middle of the screen
+  var anim = document.querySelectorAll('.task-card, .calendar-card');
+  if (anim.length && document.documentElement.classList.contains('js-motion')) {
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting || e.boundingClientRect.top < 0) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -50% 0px' });
+      anim.forEach(function (el) { io.observe(el); });
+    } else {
+      anim.forEach(function (el) { el.classList.add('is-in'); });
+    }
+  }
 })();

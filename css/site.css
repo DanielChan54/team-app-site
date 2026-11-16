@@ -1257,12 +1257,14 @@ a {
 }
 
 /* ---- Hero: bright photo served from the site itself at the right size for each screen ---- */
-.hero{position:relative;isolation:isolate;overflow:hidden;background-image:none !important;background-color:#eef2f6}
-.hero-media{position:absolute;inset:0;z-index:-2;margin:0}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:85% 30%;display:block}
-/* soft white wash on the left so the dark headline stays readable over the bright window */
+.hero{position:relative;isolation:isolate;overflow:hidden;background-image:none !important;background-color:#f7f8fa}
+/* The photo fills only the right 70% of the hero, so the subject lands on the right-third line,
+   and its left edge fades softly into the light background behind the text. */
+.hero-media{position:absolute;top:0;bottom:0;right:0;left:30%;z-index:-2;margin:0;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 28%);mask-image:linear-gradient(90deg,transparent 0%,#000 28%)}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:40% 30%;display:block}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background:linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.80) 30%,rgba(255,255,255,.35) 55%,rgba(255,255,255,0) 72%)}
+  background:linear-gradient(90deg,rgba(247,248,250,.9) 0%,rgba(247,248,250,.6) 35%,rgba(247,248,250,0) 50%)}
 /* light hero = dark text */
 .hero h1.white{color:var(--dark-blue)}
 .hero .paragraph{color:var(--dark-blue)}
@@ -1270,13 +1272,12 @@ a {
 .hero .w-nav-button,.hero .w-nav-button .icon{color:var(--dark-blue)}
 .hero .w-nav-button.w--open,.hero .w-nav-button.w--open .icon{color:#fff}
 @media (max-width:991px){
-  .hero-media img{object-position:100% 30%}
-  .hero::before{background:linear-gradient(90deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.85) 40%,rgba(255,255,255,.3) 70%,rgba(255,255,255,0) 85%)}
+  .hero .div-block{max-width:430px}
 }
 /* phones: text on a light background, photo underneath it, edge to edge */
 @media (max-width:767px){
-  .hero{padding-bottom:0;background-color:#f5f7fa}
+  .hero{padding-bottom:0}
   .hero::before{display:none}
-  .hero-media{position:static;display:block;margin:40px -30px 0;aspect-ratio:4/3}
+  .hero-media{position:static;display:block;margin:40px -30px 0;aspect-ratio:4/3;-webkit-mask-image:none;mask-image:none}
   .hero-media img{object-position:50% 30%}
 }

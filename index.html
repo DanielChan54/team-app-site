@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
-<link rel="preload" as="image" imagesrcset="https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1280 1280w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1920 1920w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=2400 2400w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=2880 2880w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=3840 3840w" imagesizes="(max-width: 991px) 140vw, (max-width: 1199px) 120vw, 100vw" media="(min-width: 768px)">
+<link rel="preload" as="image" type="image/webp" imagesrcset="images/hero/hero-640.webp 640w, images/hero/hero-960.webp 960w, images/hero/hero-1280.webp 1280w, images/hero/hero-1600.webp 1600w, images/hero/hero-1920.webp 1920w, images/hero/hero-2576.webp 2576w" imagesizes="(max-width: 991px) 135vw, 100vw" media="(min-width: 768px)">
 </head>
 <body>
   <div class="modal-wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -40,19 +40,15 @@
   </div>
 
   <section class="hero">
-    <picture class="hero-media">
-      <source media="(max-width: 767px)" srcset="https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=600&h=960&fit=crop 600w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=900&h=1440&fit=crop 900w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1920&fit=crop 1200w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1500&h=2400&fit=crop 1500w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1800&h=2880&fit=crop 1800w" sizes="(max-width: 479px) 140vw, 110vw">
-      <img src="https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1920" srcset="https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1280 1280w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1920 1920w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=2400 2400w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=2880 2880w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=3840 3840w" sizes="(max-width: 991px) 140vw, (max-width: 1199px) 120vw, 100vw" alt="Two colleagues working together on laptops in a warmly lit room at night" fetchpriority="high" decoding="async">
-    </picture>
     <div class="navbar w-nav">
       <div class="container w-container">
-        <a href="./" class="brand w-nav-brand" aria-label="Team App home"><img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a511f001be522a1302e1ffc_logo%20-%20team%20app.svg" alt="Team App" class="image"></a>
-        <nav class="nav-menu w-nav-menu">
-          <a href="#" class="nav-link w-nav-link">Product</a>
-          <a href="blog/" class="nav-link w-nav-link">Blog</a>
-          <a href="#" class="nav-link w-nav-link">Contact</a>
-          <a href="#" class="nav-link w-nav-link">Log In</a>
-          <a href="#" class="nav-link nav-button w-nav-link" data-open-modal>Get Access</a>
+        <a href="./" class="brand w-nav-brand" aria-label="Team App home"><img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a5fbf3629e60b3b393b3ac7_team%20-%20logo.svg" alt="Team App" class="image"></a>
+        <nav class="nav-menu blog-nav-menu w-nav-menu">
+          <a href="#" class="nav-link dark-nav-link w-nav-link">Product</a>
+          <a href="blog/" class="nav-link dark-nav-link w-nav-link">Blog</a>
+          <a href="#" class="nav-link dark-nav-link w-nav-link">Contact</a>
+          <a href="#" class="nav-link dark-nav-link w-nav-link">Log In</a>
+          <a href="#" class="nav-link nav-button blue-nav-button w-nav-link" data-open-modal>Get Access</a>
         </nav>
         <button class="menu-button w-nav-button" type="button" aria-label="Open menu" aria-expanded="false"><span class="icon"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></button>
       </div>
@@ -72,6 +68,12 @@
         </div>
       </div>
     </div>
+    <picture class="hero-media">
+      <source media="(max-width: 767px)" type="image/webp" srcset="images/hero/hero-mobile-480.webp 480w, images/hero/hero-mobile-768.webp 768w, images/hero/hero-mobile-1080.webp 1080w, images/hero/hero-mobile-1831.webp 1831w" sizes="100vw">
+      <source media="(max-width: 767px)" srcset="images/hero/hero-mobile-480.jpg 480w, images/hero/hero-mobile-768.jpg 768w, images/hero/hero-mobile-1080.jpg 1080w, images/hero/hero-mobile-1831.jpg 1831w" sizes="100vw">
+      <source type="image/webp" srcset="images/hero/hero-640.webp 640w, images/hero/hero-960.webp 960w, images/hero/hero-1280.webp 1280w, images/hero/hero-1600.webp 1600w, images/hero/hero-1920.webp 1920w, images/hero/hero-2576.webp 2576w" sizes="(max-width: 991px) 135vw, 100vw">
+      <img src="images/hero/hero-1920.jpg" srcset="images/hero/hero-640.jpg 640w, images/hero/hero-960.jpg 960w, images/hero/hero-1280.jpg 1280w, images/hero/hero-1600.jpg 1600w, images/hero/hero-1920.jpg 1920w, images/hero/hero-2576.jpg 2576w" sizes="(max-width: 991px) 135vw, 100vw" width="2576" height="1717" alt="Woman working on a laptop in a bright room" fetchpriority="high" decoding="async">
+    </picture>
   </section>
 
   <section class="section overflow-hidden">

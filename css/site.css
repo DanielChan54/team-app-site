@@ -1256,15 +1256,27 @@ a {
 }
 }
 
-/* ---- New hero image: real <img> with srcset so the browser always gets
-   a file large enough for the screen (no more upscaled, fuzzy background). ---- */
-.hero{position:relative;isolation:isolate;overflow:hidden;background-image:none !important;background-color:#16202e}
+/* ---- Hero: bright photo served from the site itself at the right size for each screen ---- */
+.hero{position:relative;isolation:isolate;overflow:hidden;background-image:none !important;background-color:#eef2f6}
 .hero-media{position:absolute;inset:0;z-index:-2;margin:0}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:85% 30%;display:block}
+/* soft white wash on the left so the dark headline stays readable over the bright window */
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background:linear-gradient(90deg,rgba(12,20,34,.72) 0%,rgba(12,20,34,.50) 40%,rgba(12,20,34,.18) 75%,rgba(12,20,34,.08) 100%)}
-.hero .w-nav-button,.hero .w-nav-button .icon{color:#fff}
+  background:linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.80) 30%,rgba(255,255,255,.35) 55%,rgba(255,255,255,0) 72%)}
+/* light hero = dark text */
+.hero h1.white{color:var(--dark-blue)}
+.hero .paragraph{color:var(--dark-blue)}
+.hero .text-field{border-color:rgba(34,59,93,.18)}
+.hero .w-nav-button,.hero .w-nav-button .icon{color:var(--dark-blue)}
+.hero .w-nav-button.w--open,.hero .w-nav-button.w--open .icon{color:#fff}
+@media (max-width:991px){
+  .hero-media img{object-position:100% 30%}
+  .hero::before{background:linear-gradient(90deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.85) 40%,rgba(255,255,255,.3) 70%,rgba(255,255,255,0) 85%)}
+}
+/* phones: text on a light background, photo underneath it, edge to edge */
 @media (max-width:767px){
+  .hero{padding-bottom:0;background-color:#f5f7fa}
+  .hero::before{display:none}
+  .hero-media{position:static;display:block;margin:40px -30px 0;aspect-ratio:4/3}
   .hero-media img{object-position:50% 30%}
-  .hero::before{background:linear-gradient(180deg,rgba(12,20,34,.55) 0%,rgba(12,20,34,.45) 55%,rgba(12,20,34,.70) 100%)}
 }

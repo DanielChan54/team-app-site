@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Team App - Instant collaboration for remote teams</title>
+<meta name="description" content="All-in-one place for your remote team to chat, collaborate, and track project progress.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Team App - Instant collaboration for remote teams">
+<meta property="og:description" content="All-in-one place for your remote team to chat, collaborate, and track project progress.">
+<meta property="og:image" content="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a515aa581c78254f74633d6_African-American%20lady.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a676f6ff5507aba002f8652_favicon.png">
+<link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a676f69221634fd64a06910_webclip.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="preload" as="image" imagesrcset="https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1280 1280w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1920 1920w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=2400 2400w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=2880 2880w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=3840 3840w" imagesizes="(max-width: 991px) 140vw, (max-width: 1199px) 120vw, 100vw" media="(min-width: 768px)">
+</head>
+<body>
+  <div class="modal-wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="close-area"></div>
+    <div class="modal">
+      <h2 id="modal-title">Get Early Access</h2>
+      <p class="paragraph-2">Submit the form and we will notify you once the app is launched.</p>
+      <div class="w-form">
+        <form data-static-form aria-label="Early access">
+          <label class="sr-only" for="name">Name</label>
+          <input class="text-field w-input" maxlength="256" name="Name" placeholder="Name" type="text" id="name" required>
+          <label class="sr-only" for="Modal-Email">Email</label>
+          <input class="text-field w-input" maxlength="256" name="Modal-Email" placeholder="Email address" type="email" id="Modal-Email" required>
+          <input type="submit" value="Get Early Access" class="modal-button w-button">
+        </form>
+        <div class="w-form-done"><div>Thank you! Your submission has been received!</div></div>
+        <div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div>
+      </div>
+      <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a8062cd09097340d15f89cf_Exit%20Icon.png" alt="Close" class="close-icon" role="button" tabindex="0">
+    </div>
+  </div>
+
+  <section class="hero">
+    <picture class="hero-media">
+      <source media="(max-width: 767px)" srcset="https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=600&h=960&fit=crop 600w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=900&h=1440&fit=crop 900w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1920&fit=crop 1200w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1500&h=2400&fit=crop 1500w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1800&h=2880&fit=crop 1800w" sizes="(max-width: 479px) 140vw, 110vw">
+      <img src="https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1920" srcset="https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1280 1280w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=1920 1920w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=2400 2400w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=2880 2880w, https://images.pexels.com/photos/8037019/pexels-photo-8037019.jpeg?auto=compress&cs=tinysrgb&w=3840 3840w" sizes="(max-width: 991px) 140vw, (max-width: 1199px) 120vw, 100vw" alt="Two colleagues working together on laptops in a warmly lit room at night" fetchpriority="high" decoding="async">
+    </picture>
+    <div class="navbar w-nav">
+      <div class="container w-container">
+        <a href="./" class="brand w-nav-brand" aria-label="Team App home"><img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a511f001be522a1302e1ffc_logo%20-%20team%20app.svg" alt="Team App" class="image"></a>
+        <nav class="nav-menu w-nav-menu">
+          <a href="#" class="nav-link w-nav-link">Product</a>
+          <a href="blog/" class="nav-link w-nav-link">Blog</a>
+          <a href="#" class="nav-link w-nav-link">Contact</a>
+          <a href="#" class="nav-link w-nav-link">Log In</a>
+          <a href="#" class="nav-link nav-button w-nav-link" data-open-modal>Get Access</a>
+        </nav>
+        <button class="menu-button w-nav-button" type="button" aria-label="Open menu" aria-expanded="false"><span class="icon"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></button>
+      </div>
+    </div>
+    <div class="container w-container">
+      <div class="div-block">
+        <h1 class="white">Instant collaboration <br>for remote teams</h1>
+        <p class="paragraph">All-in-one place for your remote team to chat, collaborate, and track project progress.</p>
+        <div class="form-block w-form">
+          <form class="form" data-static-form aria-label="Get access">
+            <label class="sr-only" for="email">Email</label>
+            <input class="text-field w-input" maxlength="256" name="Email" placeholder="Enter your email" type="email" id="email" required>
+            <input type="submit" value="Get Access" class="button w-button">
+          </form>
+          <div class="success-message w-form-done"><div>Thank you! Your submission has been received!</div></div>
+          <div class="error-message w-form-fail"><div class="text-block">Oops! Something went wrong while submitting the form.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section overflow-hidden">
+    <div class="container w-container">
+      <div class="mockup-flexbox">
+        <div class="content-wrapper">
+          <h1>Your hub for teamwork</h1>
+          <p>In Team App, you've got the flexibility to work whenever and wherever you want. Easily chat, send audio and video clips, or hop on a huddle to talk things out live.</p>
+          <a href="#" class="link-block w-inline-block"><div class="link-2">Learn More</div><img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a5150e1e739510d3b276e3f_arrow_right_alt_24px.svg" loading="lazy" alt="" class="arrow-icon"></a>
+        </div>
+        <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a515611ce9fdf656c4576e4_Mockup.avif" srcset="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a515611ce9fdf656c4576e4_Mockup-p-500.avif 500w, https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a515611ce9fdf656c4576e4_Mockup-p-800.avif 800w, https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a515611ce9fdf656c4576e4_Mockup-p-1080.avif 1080w, https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a515611ce9fdf656c4576e4_Mockup-p-1600.avif 1600w, https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a515611ce9fdf656c4576e4_Mockup-p-2000.avif 2000w" sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, 900px" loading="lazy" alt="Team App desktop and mobile app" class="mockup">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container w-container">
+      <div class="mockup-flexbox reverse-flex">
+        <div class="image-wrapper">
+          <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a52962aecfd46e075dff3a9_African-American%20woman%20on%20couch%201.avif" srcset="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a52962aecfd46e075dff3a9_African-American%20woman%20on%20couch%201-p-500.avif 500w, https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a52962aecfd46e075dff3a9_African-American%20woman%20on%20couch%201-p-800.avif 800w, https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a52962aecfd46e075dff3a9_African-American%20woman%20on%20couch%201-p-1080.avif 1080w" sizes="(max-width: 479px) 90vw, 50vw" loading="lazy" alt="Woman using a laptop on a couch">
+          <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a5295f2ecfd46e075dfed06_notification%20mockup.avif" loading="lazy" alt="Task notification" class="event-card">
+          <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a52962acf4c0c15c84402fd_notification%20mockup%20-%202.avif" loading="lazy" alt="Task notification" class="event-card event-2">
+        </div>
+        <div class="content-wrapper">
+          <h1>Simple task management</h1>
+          <p>Task Management with Team App is as simple as it gets. No complicated layout and need for user training. Your team members will intuitively know how to navigate the platform. It’s so simple a baby could do it!</p>
+          <a href="#" class="link-block w-inline-block"><div class="link-2">Learn More</div><img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a5150e1e739510d3b276e3f_arrow_right_alt_24px.svg" loading="lazy" alt="" class="arrow-icon"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section overflow-hidden">
+    <div class="container w-container">
+      <div class="mockup-flexbox">
+        <div class="content-wrapper">
+          <h1>Scheduling that actually works</h1>
+          <p>Integrate the Team calendar with your favorite calendar app, be it Google Calendar or iCal.<br><br>Each team member works with their favorite calendar, while all the data is synced with the master calendar.</p>
+          <a href="#" class="link-block w-inline-block"><div class="link-2">Learn More</div><img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a5150e1e739510d3b276e3f_arrow_right_alt_24px.svg" loading="lazy" alt="" class="arrow-icon"></a>
+        </div>
+        <div class="image-wrapper reverse">
+          <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a52962a34afa63ae20fa701_brunette%20on%20couch%201.avif" srcset="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a52962a34afa63ae20fa701_brunette%20on%20couch%201-p-500.avif 500w, https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a52962a34afa63ae20fa701_brunette%20on%20couch%201-p-800.avif 800w, https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a52962a34afa63ae20fa701_brunette%20on%20couch%201-p-1080.avif 1080w" sizes="(max-width: 479px) 90vw, 50vw" loading="lazy" alt="Woman checking her schedule on a couch">
+          <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a976d5a2134309670d5b87b_0aa59c8191024098654996f7909c78e7_calendar-sept-2026.svg" loading="lazy" alt="Calendar for September 2026" class="calendar-card">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section overflow-hidden testimonial-section">
+    <div class="container w-container">
+      <h1>What people say about Team </h1>
+      <div class="testimonial-slider w-slider" aria-roledescription="carousel" aria-label="Testimonials">
+        <div class="mask w-slider-mask">
+          <div class="w-slider-track">
+            <div class="slide w-slide" role="group" aria-label="Testimonial 1 of 4">
+              <div class="testimonial-card">
+                <div class="testimonial-rating" aria-label="5 out of 5 stars"><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span></div>
+                <p>Team App keeps our whole company perfectly aligned now. Meetings dropped in half since we switched.</p>
+                <div class="div-block-3">
+                  <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a525adae9259d37248a9d5c_Avatar%20-%20Amy%20Goldberg.avif" loading="lazy" alt="Amy Goldberg" class="image-5">
+                  <div class="text-block">Amy Goldberg</div>
+                  <div class="text-block-6">CEO at Coca-Cola</div>
+                </div>
+              </div>
+            </div>
+            <div class="slide w-slide" role="group" aria-label="Testimonial 2 of 4">
+              <div class="testimonial-card">
+                <div class="testimonial-rating" aria-label="5 out of 5 stars"><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span></div>
+                <p>Our campaigns launch much faster now that marketing and design finally collaborate in one shared space.</p>
+                <div class="div-block-3">
+                  <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a5260b5a95852447e98acd8_Avatar%20-%20Marcus%20Banta.avif" loading="lazy" alt="Marcus Banta" class="image-5">
+                  <div class="text-block">Marcus Banta</div>
+                  <div class="text-block-6">CMO at Oracle</div>
+                </div>
+              </div>
+            </div>
+            <div class="slide w-slide" role="group" aria-label="Testimonial 3 of 4">
+              <div class="testimonial-card">
+                <div class="testimonial-rating" aria-label="5 out of 5 stars"><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span></div>
+                <p>Task tracking finally makes real sense to us now. My team hits every deadline without missing a beat!</p>
+                <div class="div-block-3">
+                  <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a52607d11d198283bd70f05_Avatar%20-%20Juri%20Mancic.avif" loading="lazy" alt="Juric Mancic" class="image-5">
+                  <div class="text-block">Juric Mancic</div>
+                  <div class="text-block-6">Project Manager, Nike</div>
+                </div>
+              </div>
+            </div>
+            <div class="slide w-slide" role="group" aria-label="Testimonial 4 of 4">
+              <div class="testimonial-card">
+                <div class="testimonial-rating" aria-label="5 out of 5 stars"><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span></div>
+                <p>Internal updates reach everyone instantly now. Team App became our single source of truth quickly.</p>
+                <div class="div-block-3">
+                  <img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a97768f626e78a6404d8692_testimonial-avatar.jpg" loading="lazy" alt="Naomi Carter" class="image-5">
+                  <div class="text-block">Naomi Carter</div>
+                  <div class="text-block-6">Communications Director, Slack</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="arrow left-arrow w-slider-arrow-left" aria-label="Previous testimonial"><img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a5269be49f8b04e5316534e_arrow%20left.svg" alt=""></button>
+        <button type="button" class="arrow w-slider-arrow-right" aria-label="Next testimonial"><img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a5269d812677a371db6eb28_arrow%20right.svg" alt=""></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container w-container">
+      <div class="pricing-header">
+        <h1>Simple, transparent pricing</h1>
+        <p>Choose the plan that fits your team. Upgrade, downgrade, or cancel anytime — no hidden fees.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h2 class="pricing-plan-label">Starter</h2>
+          <div class="pricing-price-row"><div class="pricing-price">$9</div><div class="pricing-price-period">/month</div></div>
+          <p class="pricing-desc">For individuals getting organized.</p>
+          <div class="pricing-feature-list">
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Up to 5 team members</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>3 active projects</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Basic task management</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Real-time chat &amp; collaboration</span></div>
+            <div class="pricing-feature pricing-feature-unavailable"><span class="pricing-feature-check pricing-feature-check-unavailable">✗</span><span>Advanced analytics &amp; reporting</span></div>
+            <div class="pricing-feature pricing-feature-unavailable"><span class="pricing-feature-check pricing-feature-check-unavailable">✗</span><span>Priority support</span></div>
+          </div>
+          <a href="#" class="button pricing-cta pricing-cta-outline w-button">Get Started</a>
+        </div>
+        <div class="pricing-card pricing-card-featured">
+          <div class="pricing-badge">Most Popular</div>
+          <h2 class="pricing-plan-label">Team</h2>
+          <div class="pricing-price-row"><div class="pricing-price">$29</div><div class="pricing-price-period">/month</div></div>
+          <p class="pricing-desc">For growing teams that need more.</p>
+          <div class="pricing-feature-list">
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Up to 20 team members</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Unlimited projects</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Advanced task management</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Real-time chat &amp; collaboration</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Advanced analytics &amp; reporting</span></div>
+            <div class="pricing-feature pricing-feature-unavailable"><span class="pricing-feature-check pricing-feature-check-unavailable">✗</span><span>Priority support</span></div>
+          </div>
+          <a href="#" class="button pricing-cta button-featured w-button">Get Started</a>
+        </div>
+        <div class="pricing-card">
+          <h2 class="pricing-plan-label">Business</h2>
+          <div class="pricing-price-row"><div class="pricing-price">$79</div><div class="pricing-price-period">/month</div></div>
+          <p class="pricing-desc">For organizations that need full control.</p>
+          <div class="pricing-feature-list">
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Unlimited team members</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Unlimited projects</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Advanced task management</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Real-time chat &amp; collaboration</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Advanced analytics &amp; reporting</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-check">✓</span><span>Priority support</span></div>
+          </div>
+          <a href="#" class="button pricing-cta pricing-cta-outline w-button">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section footer-section">
+    <div class="container-2 w-container">
+      <div class="hero-flexbox footer-flex">
+        <div class="footer-column first">
+          <a href="" aria-label="Team App home"><img src="https://cdn.prod.website-files.com/6a5117e256e04124817c76e0/6a511f001be522a1302e1ffc_logo%20-%20team%20app.svg" alt="Team App" loading="lazy"></a>
+          <div class="text-block-8">Collaboration platform for modern teams.</div>
+        </div>
+        <div class="footer-column">
+          <h3>Company</h3>
+          <a href="#" class="link-3">About Us</a>
+          <a href="blog/" class="link-3">Blog</a>
+          <a href="#" class="link-3">Support</a>
+          <a href="#" class="link-3">Knowledge Base</a>
+        </div>
+        <div class="footer-column">
+          <h3>Features</h3>
+          <a href="#" class="link-3">Screen Sharing</a>
+          <a href="#" class="link-3">iOS &amp; Android Apps</a>
+          <a href="#" class="link-3">File Sharing</a>
+          <a href="#" class="link-3">User Management</a>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <a href="mailto:info@chatapp.com" class="link-3">info@teamapp.com</a>
+          <a href="#" class="link-3">1-800-200-3000</a>
+          <a href="https://maps.app.goo.gl/Cqzq3ADuHfRPR4Qm9" target="_blank" rel="noopener" class="link-3">1010 Sunset Blvd., <br>Palo Alto, CA</a>
+        </div>
+        <div class="footer-column last">
+          <h3>Stay up to date</h3>
+          <a href="#" class="susbscribe-text">Subscribe to our newsletter</a>
+          <div class="form-block-copy w-form">
+            <form class="form-copy" data-static-form aria-label="Newsletter signup">
+              <label class="sr-only" for="footer-email">Email</label>
+              <input class="text-field-copy w-input" maxlength="256" name="Email" placeholder="Your email" type="email" id="footer-email" required>
+              <input type="submit" value="Subscribe" class="arrow-button w-button">
+            </form>
+            <div class="success-message w-form-done"><div>Thank you! You have been subscribed!</div></div>
+            <div class="error-message w-form-fail"><div class="text-block">Oops! Something went wrong while submitting the form.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="text-block-7">© Copyright TeamApp Inc.</div>
+    </div>
+  </section>
+<script src="js/site.js" defer></script>
+</body>
+</html>

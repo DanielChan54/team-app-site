@@ -38,7 +38,7 @@
   // Testimonial slider
   document.querySelectorAll('.w-slider').forEach(function (slider) {
     var track = slider.querySelector('.w-slider-track');
-    var slides = slider.querySelectorAll('.w-slide');
+    var slides = Array.prototype.slice.call(slider.querySelectorAll('.w-slide'));
     var prev = slider.querySelector('.w-slider-arrow-left');
     var next = slider.querySelector('.w-slider-arrow-right');
     var i = 0;
@@ -46,10 +46,17 @@
       var s = slides[0];
       return s.getBoundingClientRect().width + parseFloat(getComputedStyle(s).marginRight || 0);
     }
-    function go(n) {
-      i = (n + slides.length) % slides.length;
-      track.style.transform = 'translateX(' + (-i * step()) + 'px)';
+    function perView() {
+      var mask = slider.querySelector('.w-slider-mask');
+      return Math.max(1, Math.round((mask.getBoundingClientRect().width + parseFloat(getComputedStyle(slides[0]).marginRight || 0)) / step()));
     }
+    function go(n) {
+      var last = Math.max(0, slides.length - perView());
+      i = n > last ? 0 : (n < 0 ? last : n);   // wrap around at either end
+      track.style.transform = 'translateX(' + (-i * step()) + 'px)';
+      slides.forEach(function (s, k) { s.setAttribute('aria-hidden', (k < i || k >= i + perView()) ? 'true' : 'false'); });
+    }
+    go(0);
     if (prev) prev.addEventListener('click', function () { go(i - 1); });
     if (next) next.addEventListener('click', function () { go(i + 1); });
     window.addEventListener('resize', function () { go(i); });

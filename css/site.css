@@ -1313,3 +1313,30 @@ a {
   .task-chip{font-size:2.3cqi}
   .task-attach{font-size:2.4cqi}
 }
+
+/* ---- Tablet & phone: stack the feature sections (photo on top, text below) ---- */
+@media (max-width:991px){
+  .mockup-flexbox{flex-direction:column-reverse;align-items:stretch}
+  .mockup-flexbox.reverse-flex{flex-direction:column;flex-wrap:nowrap}
+  .content-wrapper{max-width:560px;margin-top:40px}
+  .image-wrapper,.image-wrapper.reverse{width:100%;max-width:600px;margin:0}
+  .image-wrapper > img:first-child{display:block;width:100%;height:auto}
+  .mockup{display:block;width:100%;min-width:0;max-width:none;margin:0}
+  .section.overflow-hidden{overflow:hidden}
+}
+/* ---- Phones: cards keep readable text sizes instead of shrinking with the photo ---- */
+@media (max-width:479px){
+  .task-card{width:64%;right:4%;padding:12px 14px;border-radius:8px;box-shadow:0 6px 18px rgba(34,59,93,.18)}
+  .task-card-1{top:4%}
+  .task-card-2{top:auto;bottom:4%}
+  .task-time{font-size:11px}
+  .task-title{margin-top:5px;font-size:14px;line-height:1.35}
+  .task-meta{gap:6px;margin-top:10px}
+  .task-send,.task-chip{min-width:26px;height:26px;border-radius:6px}
+  .task-send{width:26px;border-width:1.5px}
+  .task-chip{padding:0 5px;font-size:10.5px}
+  .task-attach{gap:3px;font-size:12px}
+  .task-attach svg{width:13px;height:13px}
+  .attach-label{display:none}
+  .calendar-card{width:52%;height:auto}
+}

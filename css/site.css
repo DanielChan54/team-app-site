@@ -1358,3 +1358,9 @@ a {
   .js-motion .task-card,.js-motion .calendar-card{opacity:1;transform:none;transition:none}
   .modal-wrapper.is-open{animation:none}
 }
+
+/* ---- Scheduling section (desktop): same 60px text-to-photo gap as the task section ---- */
+@media (min-width:992px){
+  .schedule-flex .content-wrapper{flex:0 0 410px}
+  .schedule-flex .image-wrapper.reverse{margin-left:60px;margin-right:0}
+}

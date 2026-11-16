@@ -1281,3 +1281,35 @@ a {
   .hero-media{position:static;display:block;margin:40px -30px 0;aspect-ratio:4/3;-webkit-mask-image:none;mask-image:none}
   .hero-media img{object-position:50% 30%}
 }
+
+/* ---- Task notification cards (rebuilt in HTML so they keep their proportions) ---- */
+.task-layer{position:absolute;inset:0;container-type:inline-size;pointer-events:none}
+.task-card{position:absolute;right:6%;width:44%;padding:4.4cqi 4.4cqi 4cqi;background:#fff;border-radius:2cqi;
+  box-shadow:0 1.6cqi 4.8cqi rgba(34,59,93,.16),0 .3cqi .8cqi rgba(34,59,93,.08);
+  font-family:Cabin,sans-serif;text-align:left;pointer-events:auto}
+.task-card-1{top:6%}
+.task-card-2{top:44%}
+.task-time{font-size:2.1cqi;line-height:1.3;color:#8b95a7;letter-spacing:.01em}
+.task-title{margin-top:1.6cqi;font-size:3.1cqi;line-height:1.35;font-weight:500;color:var(--dark-blue)}
+.task-meta{display:flex;align-items:center;gap:1.3cqi;margin-top:3.2cqi}
+.task-send{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:5.6cqi;height:5.6cqi;
+  border:.25cqi solid var(--primary-blue);border-radius:1.2cqi;color:var(--primary-blue)}
+.task-send svg{width:52%;height:52%}
+.task-chip{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;min-width:5.6cqi;height:5.6cqi;padding:0 1cqi;
+  border-radius:1.2cqi;font-size:1.9cqi;font-weight:700;letter-spacing:.04em;white-space:nowrap}
+.chip-red{background:#fde8e6;color:#e5534b}
+.chip-blue{background:#e3f4fd;color:#1d9bd8}
+.chip-purple{background:#f1e8fb;color:#9b51e0}
+.chip-yellow{background:#fff6d6;color:#d9a404}
+.task-attach{margin-left:auto;display:inline-flex;align-items:center;gap:.8cqi;font-size:2cqi;color:#8b95a7;white-space:nowrap}
+.task-attach svg{width:2.6cqi;height:2.6cqi;color:var(--primary-blue)}
+/* phones: the photo is small, so give the cards a little more room */
+@media (max-width:479px){
+  .task-card{width:52%;right:4%}
+  .task-time{font-size:2.6cqi}
+  .task-title{font-size:3.6cqi}
+  .task-chip,.task-send{min-width:6.4cqi;height:6.4cqi}
+  .task-send{width:6.4cqi}
+  .task-chip{font-size:2.3cqi}
+  .task-attach{font-size:2.4cqi}
+}
